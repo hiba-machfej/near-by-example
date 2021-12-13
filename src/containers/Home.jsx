@@ -1,7 +1,10 @@
 import logo from '../logo.svg';
 import '../App.css';
+import { useContent } from '../composables/index.js';
 
 const Home = () => {
+  const { records } = useContent();
+
   return (
     <div>
       <header className="App-header">

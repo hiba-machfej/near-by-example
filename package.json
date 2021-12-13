@@ -1,5 +1,5 @@
 {
-  "name": "starter--react-tailwind",
+  "name": "near-by-example",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,19 +7,21 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.24.0",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-dotenv": "^0.1.3",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
+    "start": "react-dotenv && craco start",
+    "build": "react-dotenv && craco build",
+    "test": "react-dotenv && craco test",
     "eject": "react-scripts eject",
-    "fix": "prettier --write 'src/**/*.js*' 'src/**/*.jsx*'"
+    "fix": "prettier --write 'src/**/*.js*'"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +45,10 @@
     "autoprefixer": "^9",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "react-dotenv": {
+    "whitelist": [
+      "APP_API_KEY"
+    ]
   }
 }
