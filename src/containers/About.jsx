@@ -10,6 +10,6 @@ const About = () => {
       </header>
     </div>
   );
-}
+};
 
 export default About;
