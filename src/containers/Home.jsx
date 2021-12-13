@@ -4,6 +4,7 @@ import { useContent } from '../composables/index.js';
 
 const Home = () => {
   const { records } = useContent();
+  console.log(records)
 
   return (
     <div>
