@@ -2,8 +2,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './containers/Home';
 import About from './containers/About';
 import Navbar from './components/Navbar';
+import {useEffect} from 'react';
 
 function App() {
+  
   return (
     <Router>
       <Navbar />
