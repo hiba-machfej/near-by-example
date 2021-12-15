@@ -9,7 +9,10 @@ module.exports = {
         blue: '#22043D',
         DEFAULT: '#160258'
       }, 
-      'white': '#FFFFFF'
+      'white': '#FFFFFF',
+      'teal':'#0d9488',
+      'revolver':'#2e1539',
+      'pinkswan':'#B6B6B6'
     }
   },
   variants: {
