@@ -30,7 +30,7 @@ export default function ExamplesList() {
               </h3>
 
               <p className="text-gray-900 dark:text-white mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div className="relative pt-6 pb-16 sm:pb-24 mt-32">
+              <div className="relative pt-6 pb-16 sm:pb-24 my-20 my-4">
       
                   <img className="mx-auto mt-5" src={rocket} alt="rocket" />
           
