@@ -1,18 +1,15 @@
 import axios from 'axios';
-import env from 'react-dotenv';
 
-export const getRecords = async () => {
-  const baseURL = `https://v1.nocodeapi.com/hiba/airtable/${env.APP_API_KEY}?tableName=as&fields=title`;
-  // let config = {
-  //   headers: {
-  //     Authorization: `Bearer keyb2fgLXNWaAl6xr`,
-  //   },
-  // };
+export const getRecords = async (name) => {
+  const baseURL = `https://v1.nocodeapi.com/hiba/airtable/${process.env.REACT_APP_API_KEY}?tableName=${name}&fields=title`;
+  console.log(baseURL);
+
+  console.log(process.env.REACT_APP_API_KEY);
 
   try {
     const response = await axios.get(baseURL);
-    console.log(response.data);
-    return response.data;
+    console.log(response.data.records);
+    return response.data.records;
   } catch (error) {
     console.error(error);
   }

@@ -1,12 +1,7 @@
-
-
 const About = () => {
   return (
     <div>
-      <header className="App-header">
-       
-        About page
-      </header>
+      <header className="App-header">About page</header>
     </div>
   );
 };
