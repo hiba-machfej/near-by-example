@@ -1,10 +1,12 @@
+
+
+
 export default function Home() {
+
   return (
-    <div className="relative bg-gray-50 overflow-hiddenbg-white dark:bg-purples">
-  <div className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
-        <div className="relative h-full max-w-7xl mx-auto bg-purples-red">
-         
-        </div>
+    <div className="relative bg-gray-50 overflow-hidden bg-white dark:bg-purples bg-gradient-radial from-lavender-blue to-lavender dark:from-purples-red dark:to-purples h-screen pt-20" >
+      <div className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
+        {/* <div className="relative h-full max-w-7xl mx-auto bg-purples-red blur-2xl" ></div> */}
       </div>
 
       <div className="relative pt-6 pb-16 sm:pb-24">
@@ -16,13 +18,13 @@ export default function Home() {
             <p className="mt-3 max-w-md mx-auto text-base text-gray-500 dark:text-white sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">Select your desired learning path</p>
             <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
               <div className="rounded-md shadow">
-                <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-green bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
                   AssemblyScript
                 </a>
               </div>
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                 Rust
+                <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-green hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                  Rust
                 </a>
               </div>
             </div>

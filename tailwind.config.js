@@ -2,13 +2,19 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: { 
+        'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))'
+      }, 
+    },
     colors: {
       'purples': {
         red: '#5E044B',
-        blue: '#22043D',
-        DEFAULT: '#160258'
+        DEFAULT: '#160258',
       }, 
+      'lavender': '#f7f5ff',
+      'lavender-blue': '#C2ADFF',
+      'green': '#0FAE96',
       'white': '#FFFFFF'
     }
   },

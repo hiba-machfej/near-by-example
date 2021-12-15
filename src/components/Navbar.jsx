@@ -15,7 +15,7 @@ const navigation = [
 const Navbar = () => {
   const [colorTheme, setTheme] = useDarkMode();
   return (
-    <div className="relative py-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 overflow-hidden">
+    <div className="absolute py-10 w-full z-10 dark:text-white" >
       {/* <NavLink className="mr-10" to="/">
         Home
       </NavLink>
