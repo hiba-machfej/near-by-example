@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 } */
+.step-number::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  bottom: -3rem;
+  margin-left: -1px;
+  border-left: 2px dashed #eaeff4;
+}
+
+.step-element:last-child .step-number::before {
+  bottom: 1rem;
+}
+.step-element{
+  display: flex;
+  padding: 1rem 0;
+}

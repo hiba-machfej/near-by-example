@@ -15,7 +15,9 @@ module.exports = {
       'lavender': '#f7f5ff',
       'lavender-blue': '#C2ADFF',
       'green': '#0FAE96',
-      'white': '#FFFFFF'
+      'white': '#FFFFFF',
+      'revolver':'#2e1539',
+      'pinkswan':'#B6B6B6'
     }
   },
   variants: {

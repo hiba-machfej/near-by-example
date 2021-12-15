@@ -17,14 +17,14 @@ export default function Home() {
             </h1>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-500 dark:text-white sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">Select your desired learning path</p>
             <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-              <div className="rounded-md shadow">
-                <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-green bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+              <div className="rounded-md shadow w-1/2">
+                <a href="/examplelist/assemblyscript" className="w-full flex items-center justify-center px-8 py-3 border border-teal text-base font-medium rounded-md text-teal bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
                   AssemblyScript
                 </a>
               </div>
-              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-green hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                  Rust
+              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 w-1/2">
+                <a  href="/examplelist/rust" className="w-full flex items-center justify-center px-8 py-3 border border-teal text-base font-medium rounded-md text-white bg-teal hover:bg-gray-50 md:py-4 md:text-lg md:px-10" type="button">
+                 Rust
                 </a>
               </div>
             </div>
