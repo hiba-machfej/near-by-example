@@ -24,18 +24,35 @@ export default function ExamplesList() {
       <div className="relative overflow-hidden h-screen dark:bg-purples bg-gradient-radial from-lavender-blue to-lavender dark:from-purples-red dark:to-purples">
         <div className="relative pt-6 pb-16 sm:pb-24 mt-32 ">
           <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 ">
+          {name === 'as' ?
             <div className="text-center">
+           
               <h3 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">{name === 'as' ? 'Assembly Script' : 'Rust'}</span>
+                <span className="block xl:inline">Assembly Script}</span>
               </h3>
 
-              <p className="text-gray-900 dark:text-white mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p className="text-gray-900 dark:text-white mt-4">If you coming from a javascript background, Assembly script is the easiest way to start your journey in writing contract</p>
               <div className="relative pt-6 pb-16 sm:pb-24 my-20 my-4">
       
                   <img className="mx-auto mt-5" src={rocket} alt="rocket" />
           
               </div>
             </div>
+            :
+            <div className="text-center">
+           
+            <h3 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+              <span className="block xl:inline"> Rust </span>
+            </h3>
+
+            <p className="text-gray-900 dark:text-white mt-4">Here you will find the steps to walk you through your journey in writing contract with Rust</p>
+            <div className="relative pt-6 pb-16 sm:pb-24 my-20 my-4">
+    
+                <img className="mx-auto mt-5" src={rocket} alt="rocket" />
+        
+            </div>
+          </div>
+          }
           </main>
         </div>
       </div>
