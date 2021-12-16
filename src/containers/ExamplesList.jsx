@@ -40,7 +40,7 @@ export default function ExamplesList() {
         </div>
       </div>
       {loading === 'loading' && <Loader />}
-      <div className="dark:bg-purples bg-gradient-radial from-lavender-blue to-lavender dark:from-purples-red dark:to-purples">{records && records.map((example, index) => <Example example={example.fields}></Example>)}</div>
+      <div className="dark:bg-purples bg-gradient-radial from-lavender-blue to-lavender dark:from-purples-red dark:to-purples">{records && records.map((example, index) => <Example key={index} example={example.fields}></Example>)}</div>
     </>
   );
 }
