@@ -3,7 +3,7 @@ import Example from '../components/Example';
 import Loader from '../components/Loader/Loader';
 import { useParams } from 'react-router';
 import { useContent } from '../composables';
-// import { Link } from 'react-router-dom';
+ import { Link } from 'react-router-dom';
 import rocket from '../images/rocket.png';
 
 export default function ExamplesList() {
@@ -55,7 +55,9 @@ export default function ExamplesList() {
         </div>
       </div>
       {loading === 'loading' && <Loader />}
-      <div className="dark:bg-purples bg-gradient-radial from-lavender-blue to-lavender dark:from-purples-red dark:to-purples">{records && records.map((example, index) => <Example key={index} example={example.fields}></Example>)}</div>
+      <div className="dark:bg-purples bg-gradient-radial from-lavender-blue to-lavender dark:from-purples-red dark:to-purples">
+        {records && records.map((example, index) => 
+        <Link to={`/example-list/${name}/${example.id}`}><Example key={index} example={example.fields} expId = {example.id} ></Example></Link>)}</div>
     </>
   );
 }
