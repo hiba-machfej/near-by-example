@@ -24,11 +24,10 @@ export default function ExamplesList() {
       <div className="relative overflow-hidden h-screen dark:bg-purples bg-gradient-radial from-lavender-blue to-lavender dark:from-purples-red dark:to-purples">
         <div className="relative pt-6 pb-16 sm:pb-24 mt-32 ">
           <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 ">
-          {name === 'as' ?
-            <div className="text-center">
+          { name === 'as' ?  <div className="text-center">
            
               <h3 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Assembly Script}</span>
+                <span className="block xl:inline">Assembly Script</span>
               </h3>
 
               <p className="text-gray-900 dark:text-white mt-4">If you coming from a javascript background, Assembly script is the easiest way to start your journey in writing contract</p>
@@ -38,8 +37,7 @@ export default function ExamplesList() {
           
               </div>
             </div>
-            :
-            <div className="text-center">
+            :<div className="text-center">
            
             <h3 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
               <span className="block xl:inline"> Rust </span>
