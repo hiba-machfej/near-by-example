@@ -1,7 +1,7 @@
 import '../App.css';
 
 export default function Example(props) {
-  const { title, description } = props.example;
+  const { title, short_description } = props.example;
 
   return (
     <div className="relative overflow-hidden ">
@@ -15,7 +15,7 @@ export default function Example(props) {
           </div>
 
           <h2 className="my-4 text-3xl font-extrabold mb-2 ">{title}</h2>
-          <p className="mt-3 font-mono text-sm text-pinkswan hover:text-gray-900 transition-all duration-200">{description}</p>
+          <p className="mt-3 font-mono text-sm text-pinkswan hover:text-gray-900 transition-all duration-200">{short_description}</p>
         </div>
       </div>
     </div>
