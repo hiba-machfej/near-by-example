@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
-        'gradient-radial-at-cl': 'radial-gradient(ellipse at center left, var(--tw-gradient-stops))', 
+        'gradient-radial-at-b': 'radial-gradient(ellipse at bottom center, var(--tw-gradient-stops))', 
         'gradient-radial-at-tr': 'radial-gradient(ellipse at top right, var(--tw-gradient-stops))', 
       }
     },
@@ -18,7 +18,10 @@ module.exports = {
       },
       lavender: '#f7f5ff',
       'lavender-blue': '#C2ADFF',
-      green: '#0FAE96',
+      lightLavender: '#ede8fe',
+      // green: '#0AD3FF',
+      green: '#2EC4B6',
+      darkGreen: '#25A194',
       revolver: '#2e1539',
       pinkswan: '#B6B6B6',
       transparent: 'transparent',

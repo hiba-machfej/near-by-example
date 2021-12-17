@@ -1,25 +1,25 @@
 import { useState } from 'react';
-import { getRecords,getRecordById } from '../services';
+import { getRecords, getRecordById } from '../services';
 
-export const useContent = (name) => {
+export const useContent = name => {
   const [records, setRecords] = useState();
   const [record, setRecord] = useState();
- 
+
   const [loading, setLoading] = useState('');
 
-  const getResult = async (name) => {
-    setLoading('loading')
+  const getResult = async name => {
+    setLoading('loading');
     const result = await getRecords(name);
     console.log(result);
-    setLoading('ready')
+    setLoading('ready');
 
     setRecords(result);
   };
-  const getRecord = async (name,id) => {
-    setLoading('loading')
-    const result = await getRecordById(name,id);
+  const getRecord = async (name, id) => {
+    setLoading('loading');
+    const result = await getRecordById(name, id);
     console.log(result);
-    setLoading('ready')
+    setLoading('ready');
 
     setRecord(result);
   };

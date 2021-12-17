@@ -6,14 +6,15 @@ import { Popover, Transition } from '@headlessui/react';
 import useDarkMode from '../composables/useDarkMode';
 
 const navigation = [
-  { name: 'Applications', href: '#' },
-  { name: 'Frontend', href: '#' },
-  { name: 'Hints', href: '#' },
+  { name: 'Smart Contracts', href: '#' },
+  { name: 'Frontend', href: '/frontend' },
+  { name: 'Hacks', href: '#' },
   { name: 'About', href: '#' }
 ];
 
 const Navbar = () => {
-  const [colorTheme, setTheme] = useDarkMode();
+  const { colorTheme, editTheme } = useDarkMode();
+
   return (
     <div className="absolute py-10 w-full z-10 dark:text-white">
       {/* <NavLink className="mr-10" to="/">
@@ -40,25 +41,25 @@ const Navbar = () => {
             </div>
             <div className="hidden md:flex md:space-x-10">
               {navigation.map(item => (
-                <NavLink key={item.name} to={item.href} className="font-medium text-white hover:text-green">
+                <NavLink key={item.name} to={item.href} className="font-medium text-gray-900  dark:text-white hover:text-green">
                   {item.name}
                 </NavLink>
               ))}
             </div>
             <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
               <span className="inline-flex rounded-md shadow mr-3">
-                <NavLink to="#" className="inline-flex items-center px-4 py-2 text-base font-medium rounded-md text-white bg-green hover:bg-gray-50">
+                <NavLink to="#" className="inline-flex items-center px-4 py-2 text-base font-medium rounded-md text-gray-900  bg-green hover:bg-darkGreen">
                   Log in
                 </NavLink>
               </span>
               {colorTheme === 'dark' ? (
-                <button onClick={() => setTheme(colorTheme)}>
+                <button onClick={() => editTheme(colorTheme)}>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                   </svg>
                 </button>
               ) : (
-                <button onClick={() => setTheme(colorTheme)}>
+                <button onClick={() => editTheme(colorTheme)}>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
@@ -92,7 +93,7 @@ const Navbar = () => {
               {/* <NavLink to="#" className="block w-full px-5 py-3 text-center font-medium text-white dark:bg-green hover:bg-gray-100">
                 Log in
               </NavLink> */}
-              <button onClick={() => setTheme(colorTheme)}>Toggle dark</button>
+              <button onClick={() => editTheme(colorTheme)}>Toggle dark</button>
             </div>
           </Popover.Panel>
         </Transition>

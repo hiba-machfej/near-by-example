@@ -9,7 +9,11 @@ const useDarkMode = () => {
     root.classList.remove(colorTheme);
     root.classList.add(theme);
   }, [theme, colorTheme]);
-  return [colorTheme, setTheme];
+
+  const editTheme = selectedTheme => {
+    setTheme(selectedTheme);
+  };
+  return { colorTheme, editTheme };
 };
 
 export default useDarkMode;
