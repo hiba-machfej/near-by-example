@@ -1,0 +1,30 @@
+.loader-wrapper {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+}
+
+.loader {
+  border: 10px solid #ffffff;
+  border-top: 10px solid #5E044B;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
