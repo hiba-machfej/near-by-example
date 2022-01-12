@@ -1,27 +1,34 @@
-import { useState, useEffect } from 'react';
-import { getRecords } from '../services';
+import { useState } from 'react';
+import { getRecords, getRecordById } from '../services';
 
-export const useContent = async () => {
+export const useContent = name => {
   const [records, setRecords] = useState();
-  // const [error, setError] = useState();
-  // const [isError, setIsError] = useState(false);
-  // const [isSuccess, setIsSuccess] = useState(false);
-  // const [isLoading, setIsLoading] = useState(false);
-  const getResult = async () => {
-    const result = await getRecords();
+  const [record, setRecord] = useState();
+
+  const [loading, setLoading] = useState('');
+
+  const getResult = async name => {
+    setLoading('loading');
+    const result = await getRecords(name);
     console.log(result);
+    setLoading('ready');
+
     setRecords(result);
   };
+  const getRecord = async (name, id) => {
+    setLoading('loading');
+    const result = await getRecordById(name, id);
+    console.log(result);
+    setLoading('ready');
 
-  useEffect(() => {
-    getResult();
-  }, []);
+    setRecord(result);
+  };
 
   return {
-    // error,
-    // isLoading,
-    // isError,
-    // isSuccess,
+    loading,
+    getResult,
+    getRecord,
+    record,
     records
   };
 };
