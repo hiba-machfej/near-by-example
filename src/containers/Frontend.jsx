@@ -2,7 +2,6 @@ const Frontend = () => {
   return (
     <div className="mb-32 relative h-screen pt-20">
       <ol className="relative space-y-2 mb-16 mx-auto max-w-7xl mt-52 ">
-     
         <li className="relative pl-10 xl:grid grid-cols-5 before:content-['hello'] before:block">
           <div className="mb-6 col-span-2 xl:mb-0">
             <h3 className="text-sm leading-6 text-gray-900 font-semibold mb-2">Create your project</h3>

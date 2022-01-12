@@ -8,8 +8,6 @@ import rocket from '../images/rocket.png';
 import SideBar from '../components/SideBar';
 import Links from '../components/Links';
 
-
-
 export default function ExamplesList() {
   const { name } = useParams();
   const { records, getResult, loading } = useContent();
@@ -22,7 +20,7 @@ export default function ExamplesList() {
   return (
     <>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-      <SideBar records={records}/>
+        <SideBar records={records} />
 
         <div className="lg:pl-[19.5rem]">
           <div className="max-w-3x pt-10 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
@@ -61,7 +59,7 @@ export default function ExamplesList() {
               ))}
           </div>
         </div>
-<Links/>
+        <Links />
       </div>
 
       {/* <div className="relative h-screen pt-20 dark:bg-purples bg-gradient-radial from-greens-100 to-greens-50 dark:from-purples-red dark:to-purples">

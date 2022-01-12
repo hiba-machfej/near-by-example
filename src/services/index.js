@@ -16,7 +16,7 @@ export const getRecords = async name => {
   try {
     const response = await axios.get(baseURL, config);
     console.log(response.data.records);
-    return response.data.records.sort((a, b) =>  a.fields.order - b.fields.order );
+    return response.data.records.sort((a, b) => a.fields.order - b.fields.order);
   } catch (error) {
     console.error(error);
   }
