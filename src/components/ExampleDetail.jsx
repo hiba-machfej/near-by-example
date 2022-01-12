@@ -6,7 +6,7 @@ import { useContent } from '../composables';
 import '../App.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import Notification from './Notification';
+// import Notification from './Notification';
 
 export default function ExampleDetail() {
   const { name, id } = useParams();
@@ -23,7 +23,7 @@ export default function ExampleDetail() {
   }, [record]);
 
   return (
-    <div className="relative pt-20 bg-gradient-radial from-lavender-blue to-lavender dark:from-purples-red dark:to-purples h-screen">
+    <div className="relative pt-20 bg-gradient-radial from-greens-50 to-white dark:from-purples-red dark:to-purples h-screen">
       {loading === 'loading' && <Loader />}
       <div className="relative pt-6 pb-16 sm:pb-24 mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
         <main className="text-center">
@@ -50,7 +50,7 @@ export default function ExampleDetail() {
             />
           )}
         </div>
-        <Notification id={record && record.related} />
+        {/* <Notification id={record && record.related} /> */}
       </div>
     </div>
   );

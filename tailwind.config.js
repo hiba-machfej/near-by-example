@@ -16,22 +16,22 @@ module.exports = {
         red: '#5E044B',
         DEFAULT: '#160258'
       },
-      lavender: '#f7f5ff',
-      'lavender-blue': '#C2ADFF',
-      lightLavender: '#ede8fe',
-      // green: '#0AD3FF',
       green: '#2EC4B6',
       darkGreen: '#25A194',
-      revolver: '#2e1539',
-      pinkswan: '#B6B6B6',
+      white: '#FFFFFF',
       transparent: 'transparent',
       black: colors.black,
-      white: colors.white,
-      gray: colors.gray
+      gray: colors.gray,
+      greens: colors.emerald,
+      purple: colors.violet,
+      yellow: colors.amber,
+      pink: colors.fuchsia,
     }
   },
   variants: {
-    extend: {}
+    extend: {
+    }
   },
-  plugins: []
+  plugins: [
+  ]
 };

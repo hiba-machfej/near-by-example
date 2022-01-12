@@ -20,7 +20,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="mb-32 relative dark:bg-purples bg-gradient-radial from-lavender-blue to-lavender dark:from-purples-red dark:to-purples h-screen pt-20">
+    <div className="mb-32 relative transition-colors duration-500 dark:bg-purples bg-gradient-radial from-greens-100 to-greens-50 dark:from-purples-red dark:to-purples h-screen pt-20">
       <div className="relative pt-6 pb-16 sm:pb-24 my-20">
         <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
           <div className="text-center ">
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <div className="flex flex-col items-center justify-center mt-52">
+        <div className="flex flex-col items-center justify-center mt-20">
           <svg class="animate-bounce w-8 h-8 text-green-600 mt-12 text-center dark:text-white text-green" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>

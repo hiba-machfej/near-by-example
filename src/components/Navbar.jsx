@@ -16,13 +16,13 @@ const Navbar = () => {
   const { colorTheme, editTheme } = useDarkMode();
 
   return (
-    <div className="absolute py-10 w-full z-10 dark:text-white">
+    <div className="w-full h-[5rem] pt-[1.2rem] align-middle dark:text-white sticky top-0 z-40 backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-gray-900/10 dark:border-gray-50/[0.06] supports-backdrop-blur:bg-white/60 bg-transparent">
       {/* <NavLink className="mr-10" to="/">
         Home
       </NavLink>
       <NavLink to="/about">About</NavLink> */}
       <Popover>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6">
           <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
             <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
               <div className="flex items-center justify-between w-full md:w-auto">
