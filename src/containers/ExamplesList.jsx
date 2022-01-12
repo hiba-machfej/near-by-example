@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Example from '../components/Example';
 import Loader from '../components/Loader/Loader';
 import { useParams } from 'react-router';
@@ -10,17 +10,13 @@ import Links from '../components/Links';
 
 export default function ExamplesList() {
   const { name } = useParams();
-  const { records, getResult, loading } = useContent();
 
-  useEffect(() => {
-    getResult(name);
-    // eslint-disable-next-line
-  }, [name]);
+  const [records, setRecords] = useState([]);
 
   return (
     <>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-        <SideBar records={records} />
+        <SideBar setRecords={setRecords} />
 
         <div className="lg:pl-[19.5rem]">
           <div className="max-w-3x pt-10 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
@@ -48,7 +44,7 @@ export default function ExamplesList() {
               </div>
             </main>
           </div>
-          {loading === 'loading' && <Loader />}
+
           <div className="max-w-3x xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16 mx-auto bg-gradient-radial bg-greens-50 dark:bg-purples">
             {records &&
               records.map((example, index) => (

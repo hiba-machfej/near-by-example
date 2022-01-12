@@ -1,8 +1,28 @@
 import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router';
+import { useContent } from '../composables';
+import { useEffect, useState } from 'react';
+import Loader from '../components/Loader/Loader';
 
-const SideBar = ({ records }) => {
+const SideBar = ({ setRecords }) => {
+  const { name, id } = useParams();
+  const { records, getResult, loading } = useContent();
+
+  useEffect(() => {
+    getResult(name);
+    // eslint-disable-next-line
+  }, [name]);
+
+  useEffect(() => {
+    setRecords(records);
+
+    // eslint-disable-next-line
+  }, [records]);
+
   return (
     <div className="hidden lg:block fixed inset-0 top-[5rem] w-[20rem] pb-10 px-8 overflow-y-auto scrollbar">
+      {loading === 'loading' && <Loader />}
       <nav className="lg:text-sm lg:leading-6 relative mt-10">
         {/* <div className="sticky top-0 -ml-0.5 pointer-events-none"> */}
         <div class="bg-white dark:bg-gray-900 relative pointer-events-auto ">
@@ -16,13 +36,21 @@ const SideBar = ({ records }) => {
         </div>
         <ul className="mt-12 lg:mt-8 z-60">
           {records &&
-            records.map((example, index) => (
-              <HashLink to={example.fields.order === 0 ? '#top' : `#section-${example.fields.order - 1}`} key={index}>
-                <li className="">
-                  <h5 className="mb-8 lg:mb-3 font-semibold text-gray-900 dark:text-gray-200">{example.fields.title}</h5>
-                </li>
-              </HashLink>
-            ))}
+            records.map((example, index) =>
+              id ? (
+                <Link to={`/example-list/${name}/${example.id}`} key={index}>
+                  <li className="">
+                    <h5 className="mb-8 lg:mb-3 font-semibold text-gray-900 dark:text-gray-200">{example.fields.title}</h5>
+                  </li>
+                </Link>
+              ) : (
+                <HashLink to={example.fields.order === 0 ? '#top' : `#section-${example.fields.order - 1}`} key={index}>
+                  <li className="">
+                    <h5 className="mb-8 lg:mb-3 font-semibold text-gray-900 dark:text-gray-200">{example.fields.title}</h5>
+                  </li>
+                </HashLink>
+              )
+            )}
         </ul>
         {/* </div> */}
       </nav>
