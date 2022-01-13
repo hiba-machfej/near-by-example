@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# NEAR by Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check the website here: https://near-by-example.onrender.com/
 
 ## Available Scripts
 
