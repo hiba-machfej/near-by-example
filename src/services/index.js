@@ -11,8 +11,6 @@ export const getRecords = async name => {
     }
   };
 
-  console.log(process.env.REACT_APP_API_KEY);
-  console.log(baseURL);
   try {
     const response = await axios.get(baseURL, config);
     console.log(response.data.records);
