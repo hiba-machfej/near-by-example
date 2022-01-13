@@ -39,7 +39,7 @@ const Links = () => {
             </svg>
           </div>
         </a>
-       
+
         <a class="text-gray-500 dark:text-gray-300 hover:bg-gray-400 hover:bg-opacity-10 font-medium w-16 md:w-60 rounded-l-full lg:rounded-full flex" target="_blank" rel="noreferrer" href="https://near-in-minutes.com/">
           <div class="rounded-l-full py-3 pl-4 pr-3 flex">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">

@@ -2,7 +2,7 @@ import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { useContent } from '../composables';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Loader from '../components/Loader/Loader';
 
 const SideBar = ({ setRecords }) => {

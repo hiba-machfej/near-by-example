@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Example from '../components/Example';
-import Loader from '../components/Loader/Loader';
 import { useParams } from 'react-router';
-import { useContent } from '../composables';
 import { Link } from 'react-router-dom';
 import rocket from '../images/rocket.png';
 import SideBar from '../components/SideBar';
