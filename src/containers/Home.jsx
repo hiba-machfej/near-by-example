@@ -30,7 +30,7 @@ export default function Home() {
             </h1>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-900 dark:text-white sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">Select your desired learning path</p>
             <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-              <div className="rounded-md shadow w-1/2">
+              <div className="rounded-md shadow w-1/2 mx-auto">
                 <Link to="/example-list/as" className="w-full flex items-center justify-center px-8 py-3  text-base font-medium rounded-md text-gray-900 bg-green hover:bg-darkGreen md:py-4 md:text-lg md:px-10" type="button">
                   AssemblyScript
                 </Link>

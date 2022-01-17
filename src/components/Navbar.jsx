@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-// import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import useDarkMode from '../composables/useDarkMode';
 
 const navigation = [
@@ -34,9 +34,9 @@ const Navbar = () => {
                   </p>
                 </NavLink>
                 <div className="-mr-2 flex items-center md:hidden">
-                  <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white hover:bg-green focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white hover:bg-green focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Open main menu</span>
-                    {/* <MenuIcon className="h-6 w-6" aria-hidden="true" /> */}
+                    <MenuIcon className="h-6 w-6 text-gray-600" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -75,13 +75,11 @@ const Navbar = () => {
           <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
-                <div>
-                  <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="" />
-                </div>
+                <div>{/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="" /> */}</div>
                 <div className="-mr-2">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Close menu</span>
-                    {/* <XIcon className="h-6 w-6" aria-hidden="true" /> */}
+                    <XIcon className="h-6 w-6 text-gray-700" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
