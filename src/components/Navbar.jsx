@@ -7,10 +7,10 @@ import useDarkMode from '../composables/useDarkMode';
 
 const navigation = [
   { name: 'AssemblyScript', href: '/example-list/as' },
-  { name: 'Rust', href: '/example-list/rust' },
-  { name: 'Frontend', href: '/frontend' },
-  { name: 'Smart Contracts', href: '/soon' },
-  { name: 'Hacks', href: '/soon' }
+  // { name: 'Rust', href: '/example-list/rust' },
+  { name: 'Frontend', href: '/frontend' }
+  // { name: 'Smart Contracts', href: '/soon' },
+  // { name: 'Hacks', href: '/soon' }
   // { name: 'About', href: '#' }
 ];
 
