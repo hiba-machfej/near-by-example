@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Rust', href: '/example-list/rust' },
   { name: 'Frontend', href: '/frontend' },
   { name: 'Smart Contracts', href: '/soon' },
-  { name: 'Hacks', href: '/soon' },
+  { name: 'Hacks', href: '/soon' }
   // { name: 'About', href: '#' }
 ];
 

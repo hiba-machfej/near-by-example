@@ -4,8 +4,8 @@ const CopyUrlButton = ({ code }) => {
   const [copyCodeStatus, copyCode] = UseCopyToClipboard(code);
   let buttonText = 'Copy URL';
 
-  console.log()
-  console.log(code)
+  console.log();
+  console.log(code);
   if (copyCodeStatus === 'copied') {
     buttonText = 'Copied';
   } else if (copyCodeStatus === 'failed') {

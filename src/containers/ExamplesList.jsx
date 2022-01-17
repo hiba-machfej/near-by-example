@@ -26,7 +26,13 @@ export default function ExamplesList() {
                   </h3>
 
                   <p className="text-gray-900 dark:text-white mt-4">If you are coming from a JS background, AssemblyScript is the easiest way to start your journey in writing smart contract with NEAR.</p>
-                  <p className="text-gray-900 dark:text-white">You must use <a className="underline text-red-600" href="https://github.com/near/near-sdk-as" target="_black" rel="noopener noreferrer nofollow"><code>near-sdk-as</code></a> for developing NEAR smart contracts.</p>
+                  <p className="text-gray-900 dark:text-white">
+                    You must use{' '}
+                    <a className="underline text-red-600" href="https://github.com/near/near-sdk-as" target="_black" rel="noopener noreferrer nofollow">
+                      <code>near-sdk-as</code>
+                    </a>{' '}
+                    for developing NEAR smart contracts.
+                  </p>
                 </div>
               ) : (
                 <div className="text-center">

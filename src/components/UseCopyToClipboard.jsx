@@ -1,26 +1,25 @@
-import { useState , useCallback ,useEffect} from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
-const UseCopyToClipboard = (text) => {
-  const [copyStatus, setCopyStatus] = useState('inactive')
+const UseCopyToClipboard = text => {
+  const [copyStatus, setCopyStatus] = useState('inactive');
   const copy = useCallback(() => {
     navigator.clipboard.writeText(text).then(
       () => setCopyStatus('copied'),
-      () => setCopyStatus('failed'),
-    )
-  }, [text])
+      () => setCopyStatus('failed')
+    );
+  }, [text]);
 
   useEffect(() => {
     if (copyStatus === 'inactive') {
-      return
+      return;
     }
 
-    const timeoutId = setTimeout(() => setCopyStatus('inactive'), 2500)
+    const timeoutId = setTimeout(() => setCopyStatus('inactive'), 2500);
 
-    return () => clearTimeout(timeoutId)
-  }, [copyStatus])
+    return () => clearTimeout(timeoutId);
+  }, [copyStatus]);
 
-  return [copyStatus, copy]
-}
-
+  return [copyStatus, copy];
+};
 
 export default UseCopyToClipboard;

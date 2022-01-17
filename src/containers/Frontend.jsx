@@ -18,16 +18,23 @@ const Frontend = () => {
   return (
     <div className="mb-32 relative h-screen pt-20">
       {loading === 'loading' && <Loader />}
-      <ol className="relative space-y-2 mb-16 mx-auto max-w-7xl mt-52">
+      <div className="text-center">
+        <h3 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+          <span className="block xl:inline">Connect to Frontend</span>
+        </h3>
+
+        <p className="text-gray-900 dark:text-white mt-4">The following code will assist you in connecting your deployed smart contract to React or Vue.</p>
+      </div>
+      <ol className="relative space-y-2 mb-16 mx-auto max-w-7xl mt-32">
         {records &&
           records.map((record, index) => {
             return (
               <li key={index} className={`relative pl-10 xl:grid grid-cols-5 gap-16    pb-8 after:absolute after:top-[calc(1.875rem+1px)] after:bottom-0 after:left-[0.6875rem] after:w-px after:bg-gray-200 dark:after:bg-white`}>
-                <span className='absolute left-0 flex items-center justify-center w-[calc(1.375rem+1px)] h-[calc(1.375rem+1px)] text-[0.625rem] font-bold text-gray-700 rounded-md shadow-sm ring-1 ring-gray-900/5 bg-white dark:bg-gray-700 dark:text-gray-200 dark:ring-0 dark:shadow-none dark:highlight-white/5'>{record.fields.order}</span>
+                <span className="absolute left-0 flex items-center justify-center w-[calc(1.375rem+1px)] h-[calc(1.375rem+1px)] text-[0.625rem] font-bold text-gray-700 rounded-md shadow-sm ring-1 ring-gray-900/5 bg-white dark:bg-gray-700 dark:text-gray-200 dark:ring-0 dark:shadow-none dark:highlight-white/5">{record.fields.order}</span>
                 <div className="mb-6 col-span-2 xl:mb-0">
-                  <h4 className="text-sm leading-6 text-gray-900 font-semibold mb-2 dark:text-white">{record.fields.title}</h4>
+                  <h4 className="text-lg leading-6 text-gray-900 font-semibold mb-2 dark:text-white">{record.fields.title}</h4>
 
-                  <div className="prose prose-gray prose-sm dark:text-white">
+                  <div className="prose prose-gray prose-sm dark:text-gray-300 text-m">
                     <ReactMarkdown
                       children={record.fields.instruction}
                       components={{
