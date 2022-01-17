@@ -44,7 +44,7 @@ export default function Home() {
           </div>
         </main>
         <div className="flex flex-col items-center justify-center mt-20">
-          <svg class="animate-bounce w-8 h-8 text-green-600 mt-12 text-center dark:text-white text-green" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="animate-bounce w-8 h-8 text-green-600 mt-12 text-center dark:text-white text-green" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>

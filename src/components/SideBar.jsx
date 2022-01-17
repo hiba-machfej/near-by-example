@@ -25,11 +25,11 @@ const SideBar = ({ setRecords }) => {
       {loading === 'loading' && <Loader />}
       <nav className="lg:text-sm lg:leading-6 relative mt-10">
         {/* <div className="sticky top-0 -ml-0.5 pointer-events-none"> */}
-        <div class="bg-white dark:bg-gray-900 relative pointer-events-auto ">
-          <button type="button" class="hidden w-full lg:flex items-center text-sm leading-6 text-gray-400 rounded-md ring-1 ring-gray-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-gray-300 dark:bg-gray-800 dark:highlight-white/5 dark:hover:bg-gray-700">
-            <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-3 flex-none">
-              <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
+        <div className="bg-white dark:bg-gray-900 relative pointer-events-auto ">
+          <button type="button" className="hidden w-full lg:flex items-center text-sm leading-6 text-gray-400 rounded-md ring-1 ring-gray-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-gray-300 dark:bg-gray-800 dark:highlight-white/5 dark:hover:bg-gray-700">
+            <svg width="24" height="24" fill="none" aria-hidden="true" className="mr-3 flex-none">
+              <path d="m19 19-3.5-3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+              <circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></circle>
             </svg>
             Quick search...
           </button>

@@ -10,7 +10,7 @@ export const useContent = name => {
   const getResult = async name => {
     setLoading('loading');
     const result = await getRecords(name);
-    console.log(result);
+    // console.log(result);
     setLoading('ready');
 
     setRecords(result);
@@ -18,7 +18,7 @@ export const useContent = name => {
   const getRecord = async (name, id) => {
     setLoading('loading');
     const result = await getRecordById(name, id);
-    console.log(result);
+    // console.log(result);
     setLoading('ready');
 
     setRecord(result);
