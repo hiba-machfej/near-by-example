@@ -29,7 +29,7 @@ const Frontend = () => {
         {records &&
           records.map((record, index) => {
             return (
-              <li key={index} className={`relative pl-10 xl:grid grid-cols-5 gap-16    pb-8 after:absolute after:top-[calc(1.875rem+1px)] after:bottom-0 after:left-[0.6875rem] after:w-px after:bg-gray-200 dark:after:bg-white`}>
+              <li key={index} className={`relative pl-10 xl:grid grid-cols-5 gap-16 pb-20 after:absolute after:top-[calc(1.875rem+1px)] after:bottom-0 after:left-[0.6875rem] after:w-px after:bg-gray-200 dark:after:bg-white`}>
                 <span className="absolute left-0 flex items-center justify-center w-[calc(1.375rem+1px)] h-[calc(1.375rem+1px)] text-[0.625rem] font-bold text-gray-700 rounded-md shadow-sm ring-1 ring-gray-900/5 bg-white dark:bg-gray-700 dark:text-gray-200 dark:ring-0 dark:shadow-none dark:highlight-white/5">{record.fields.order}</span>
                 <div className="mb-6 col-span-2 xl:mb-0">
                   <h4 className="text-lg leading-6 text-gray-900 font-semibold mb-2 dark:text-white">{record.fields.title}</h4>
