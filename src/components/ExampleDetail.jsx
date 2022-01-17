@@ -10,6 +10,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import SideBar from '../components/SideBar';
 import Links from '../components/Links';
 import { useEffect, useState } from 'react';
+import CopyUrlButton from './CopyButton';
 
 export default function ExampleDetail() {
   const { name, id } = useParams();
@@ -37,21 +38,39 @@ export default function ExampleDetail() {
           </main>
           <div className="code-block">
             {record && (
-              <ReactMarkdown
-                children={record.code}
-                components={{
-                  code({ node, inline, className, children, ...props }) {
-                    const match = /language-(\w+)/.exec(className || '');
-                    return !inline && match ? (
-                      <SyntaxHighlighter children={String(children).replace(/\n$/, '')} className="code" style={vscDarkPlus} language={match[1]} PreTag="div" {...props} />
-                    ) : (
-                      <code className={className} {...props}>
-                        {children}
-                      </code>
-                    );
-                  }
-                }}
-              />
+              <div>
+                {/* <ReactMarkdown children={record.content} /> */}
+
+                <ReactMarkdown
+                  children={record.code}
+                  components={{
+                    code({ node, inline, className, children, ...props }) {
+                      const match = /language-(\w+)/.exec(className || '');
+                      return !inline && match ? (
+                        <div className="relative shadow-lg ">
+                          <div className="absolute top-2 right-0 h-8 flex items-center pr-4 ">
+                            <div className="relative flex -mr-2">
+                              <CopyUrlButton code={String(children).replace(/(```)+([^\s]+)?|(~~~)+([^\s]+)?/g, '')} />
+                            </div>
+                          </div>
+                          <SyntaxHighlighter children={String(children).replace(/\n$/, '')} className="code" style={vscDarkPlus} language={match[1]} {...props} />
+                        </div>
+                      ) : (
+                        <code className={className} {...props}>
+                          {children}
+                        </code>
+                      );
+                    },
+                    a(props) {
+                      return (
+                        <a href={props.href} target="_blank" rel="noopener noreferrer nofollow" className="underline">
+                          {props.children}
+                        </a>
+                      );
+                    }
+                  }}
+                />
+              </div>
             )}
           </div>
           {/* <Notification id={record && record.related} /> */}

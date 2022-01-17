@@ -25,7 +25,7 @@ module.exports = {
       greens: colors.emerald,
       purple: colors.violet,
       yellow: colors.amber,
-      pink: colors.fuchsia,
+      red: colors.red,
     }
   },
   variants: {

@@ -25,15 +25,16 @@ export default function ExamplesList() {
                     <span className="block xl:inline">AssemblyScript</span>
                   </h3>
 
-                  <p className="text-gray-900 dark:text-white mt-4">If you are coming from a JS background, AssemblyScript is the easiest way to start your journey in writing smart contract with NEAR</p>
+                  <p className="text-gray-900 dark:text-white mt-4">If you are coming from a JS background, AssemblyScript is the easiest way to start your journey in writing smart contract with NEAR.</p>
+                  <p className="text-gray-900 dark:text-white">You must use <a className="underline text-red-600" href="https://github.com/near/near-sdk-as" target="_black" rel="noopener noreferrer nofollow"><code>near-sdk-as</code></a> for developing NEAR smart contracts.</p>
                 </div>
               ) : (
                 <div className="text-center">
                   <h3 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
-                    <span className="block xl:inline"> Rust </span>
+                    <span className="block xl:inline"> Rust is coming soon</span>
                   </h3>
 
-                  <p className="text-gray-900 dark:text-white mt-4">Here you will find the steps to walk you through your journey in writing contract with Rust</p>
+                  {/* <p className="text-gray-900 dark:text-white mt-4">Here you will find the steps to walk you through your journey in writing contract with Rust</p> */}
                 </div>
               )}
               <div className="relative pt-6 ">

@@ -44,7 +44,7 @@ const SideBar = ({ setRecords }) => {
                   </li>
                 </Link>
               ) : (
-                <HashLink to={example.fields.order === 0 ? '#top' : `#section-${example.fields.order - 1}`} key={index}>
+                <HashLink to={example.fields.order === 1 ? '#top' : `#section-${example.fields.order - 1}`} key={index}>
                   <li className="">
                     <h5 className="mb-8 lg:mb-3 font-semibold text-gray-900 dark:text-gray-200">{example.fields.title}</h5>
                   </li>

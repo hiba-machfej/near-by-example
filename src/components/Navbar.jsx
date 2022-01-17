@@ -6,10 +6,12 @@ import { Popover, Transition } from '@headlessui/react';
 import useDarkMode from '../composables/useDarkMode';
 
 const navigation = [
-  { name: 'Smart Contracts', href: '#' },
+  { name: 'AssemblyScript', href: '/example-list/as' },
+  { name: 'Rust', href: '/example-list/rust' },
   { name: 'Frontend', href: '/frontend' },
-  { name: 'Hacks', href: '#' },
-  { name: 'About', href: '#' }
+  { name: 'Smart Contracts', href: '/soon' },
+  { name: 'Hacks', href: '/soon' },
+  // { name: 'About', href: '#' }
 ];
 
 const Navbar = () => {
@@ -47,11 +49,11 @@ const Navbar = () => {
               ))}
             </div>
             <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-              <span className="inline-flex rounded-md shadow mr-3">
+              {/* <span className="inline-flex rounded-md shadow mr-3">
                 <NavLink to="#" className="inline-flex items-center px-4 py-2 text-base font-medium rounded-md text-gray-900  bg-green hover:bg-darkGreen">
                   Log in
                 </NavLink>
-              </span>
+              </span> */}
               {colorTheme === 'dark' ? (
                 <button onClick={() => editTheme(colorTheme)}>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

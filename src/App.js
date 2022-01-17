@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import ExamplesList from './containers/ExamplesList';
 import ExampleDetail from './components/ExampleDetail';
 import Frontend from './containers/Frontend';
+import Soon from './containers/Soon';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/example-list/:name" element={<ExamplesList />} />
         <Route exact path="/example-list/:name/:id" element={<ExampleDetail />} />
         <Route exact path="/frontend" element={<Frontend />} />
+        <Route exact path="/soon" element={<Soon />} />
       </Routes>
     </Router>
   );

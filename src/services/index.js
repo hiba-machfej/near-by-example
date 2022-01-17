@@ -3,7 +3,7 @@ import axios from 'axios';
 export const getRecords = async name => {
   // const baseURL = `https://v1.nocodeapi.com/hiba/airtable/${process.env.REACT_APP_API_KEY}?tableName=${name}`;
 
-  const baseURL = `https://api.airtable.com/v0/appARo2x4d5FxgzRz/${name}?fields%5B%5D=title&fields%5B%5D=short_description&fields%5B%5D=order&fields%5B%5D=difficulty`;
+  const baseURL = `https://api.airtable.com/v0/appARo2x4d5FxgzRz/${name}?view=reviewed`;
 
   let config = {
     headers: {
@@ -19,6 +19,7 @@ export const getRecords = async name => {
     console.error(error);
   }
 };
+
 export const getRecordById = async (name, id) => {
   // const baseURL = `https://v1.nocodeapi.com/hiba/airtable/jEmoFPVFfFpjJkum?tableName=${name}&id=${id}`;
   const baseURL = `https://api.airtable.com/v0/appARo2x4d5FxgzRz/${name}/${id}`;

@@ -6,7 +6,7 @@ export default function Home() {
     {
       title: 'Smart Contracts',
       description: 'Explore NEAR Smart Contracts example in both AssemblyScript and Rust',
-      link: '/contract'
+      link: '/soon'
     },
     {
       title: 'Frontend',
@@ -15,7 +15,8 @@ export default function Home() {
     },
     {
       title: 'Hacks',
-      description: 'Tricks and Hacks to speed your coding journey with NEAR'
+      description: 'Tricks and Hacks to speed your coding journey with NEAR',
+      link: '/soon'
     }
   ];
 
