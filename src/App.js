@@ -6,8 +6,11 @@ import ExamplesList from './containers/ExamplesList';
 import ExampleDetail from './components/ExampleDetail';
 import Frontend from './containers/Frontend';
 import Soon from './containers/Soon';
+import { useGaTracker } from './composables/useGA';
 
 function App() {
+  useGaTracker();
+
   return (
     <Router>
       <Navbar />
