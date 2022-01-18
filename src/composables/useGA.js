@@ -1,23 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import ReactGA from 'react-ga4';
 
-const useGaTracker = () => {
+import analytics from '../services/analytics';
+
+export default function useGoogleAnalytics() {
   const location = useLocation();
-  const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    if (!window.location.href.includes('localhost')) {
-      ReactGA.initialize(process.env.REACT_APP_API_KEY);
-    }
-    setInitialized(true);
+    analytics.init();
   }, []);
 
   useEffect(() => {
-    if (initialized) {
-      ReactGA.pageview(location.pathname + location.search);
-    }
-  }, [initialized, location]);
-};
-
-export default useGaTracker;
+    const currentPath = location.pathname + location.search;
+    analytics.sendPageview(currentPath);
+  }, [location]);
+}
