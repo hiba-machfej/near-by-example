@@ -43,8 +43,8 @@ const SideBar = ({ setRecords }) => {
         </div>
 
         <ul className="mt-12 lg:mt-8 z-60">
-          {records &&
-            records.map((example, index) => (
+          {filteredData &&
+            filteredData.map((example, index) => (
               <Link to={`/example-list/${name}/${example.id}`} key={index}>
                 <li className="">
                   <h5 className="mb-8 lg:mb-3 font-semibold text-gray-900 dark:text-gray-200">{example.fields.title}</h5>
