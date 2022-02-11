@@ -1,4 +1,3 @@
-import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { useContent } from '../composables';
@@ -6,7 +5,7 @@ import { useEffect } from 'react';
 import Loader from '../components/Loader/Loader';
 
 const SideBar = ({ setRecords }) => {
-  const { name, id } = useParams();
+  const { name } = useParams();
   const { records, getResult, loading } = useContent();
 
   useEffect(() => {
@@ -36,21 +35,13 @@ const SideBar = ({ setRecords }) => {
         </div>
         <ul className="mt-12 lg:mt-8 z-60">
           {records &&
-            records.map((example, index) =>
-              id ? (
-                <Link to={`/example-list/${name}/${example.id}`} key={index}>
-                  <li className="">
-                    <h5 className="mb-8 lg:mb-3 font-semibold text-gray-900 dark:text-gray-200">{example.fields.title}</h5>
-                  </li>
-                </Link>
-              ) : (
-                <HashLink to={example.fields.order === 1 ? '#top' : `#section-${example.fields.order - 1}`} key={index}>
-                  <li className="">
-                    <h5 className="mb-8 lg:mb-3 font-semibold text-gray-900 dark:text-gray-200">{example.fields.title}</h5>
-                  </li>
-                </HashLink>
-              )
-            )}
+            records.map((example, index) => (
+              <Link to={`/example-list/${name}/${example.id}`} key={index}>
+                <li className="">
+                  <h5 className="mb-8 lg:mb-3 font-semibold text-gray-900 dark:text-gray-200">{example.fields.title}</h5>
+                </li>
+              </Link>
+            ))}
         </ul>
         {/* </div> */}
       </nav>
