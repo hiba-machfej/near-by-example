@@ -1,16 +1,18 @@
-import ReactMarkdown from 'react-markdown';
-// import { useEffect } from 'react';
-import Loader from '../components/Loader/Loader';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { useContent } from '../composables';
 import '../App.css';
+
+import Loader from '../components/Loader/Loader';
+import ModalForm from '../components/ModalForm';
+import SideBar from '../components/SideBar';
+import Links from '../components/Links';
+import CopyUrlButton from './CopyButton';
+
+import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 // import Notification from './Notification';
-import SideBar from '../components/SideBar';
-import Links from '../components/Links';
-import { useEffect, useState } from 'react';
-import CopyUrlButton from './CopyButton';
 
 export default function ExampleDetail() {
   const { name, id } = useParams();
@@ -23,6 +25,7 @@ export default function ExampleDetail() {
   }, [id]);
 
   const [records, setRecords] = useState([]);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="relative">
@@ -74,7 +77,14 @@ export default function ExampleDetail() {
             )}
           </div>
           {/* <Notification id={record && record.related} /> */}
+          <div className="flex justify-end mt-20">
+          <button className="text-white" onClick={() => setOpen(true)}>
+            Report a problem
+          </button>
+          </div>
         </div>
+       
+       {record && <ModalForm open={open} setOpen={setOpen} />} 
 
         <Links />
       </div>
