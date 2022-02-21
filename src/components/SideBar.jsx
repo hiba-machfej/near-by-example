@@ -26,6 +26,7 @@ const SideBar = ({ setRecords }) => {
     result = records.filter(cat => cat.fields.title.toLowerCase().includes(`${value}`.toLowerCase()));
     setFilteredData(result);
   };
+
   return (
     <div className="hidden lg:block fixed inset-0 top-[5rem] w-[20rem] pb-10 px-8 overflow-y-auto scrollbar">
       {loading === 'loading' && <Loader />}
@@ -33,13 +34,13 @@ const SideBar = ({ setRecords }) => {
         {/* <div className="sticky top-0 -ml-0.5 pointer-events-none"> */}
         <div className="bg-white dark:bg-gray-900 relative pointer-events-auto ">
           <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-            <button type="button" className="p-1 focus:outline-none focus:shadow-outline  text-gray-400">
+            <button type="button" className="p-1 focus:outline-none focus:shadow-outline text-100-400">
               <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6">
                 <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
               </svg>
             </button>
           </span>
-          <input type="search" name="q" className="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900 w-full lg:flex items-center leading-6 ring-1 ring-gray-900/10 shadow-sm py-1 pl-2 pr-3" placeholder="Quick search..." autoComplete="off" onChange={event => handleSearch(event)} />
+          <input type="search" name="q" className="text-sm dark:text-white bg-white dark:bg-gray-700 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900 w-full lg:flex items-center leading-6 ring-1 ring-gray-900/10 shadow-sm py-1 pr-3" placeholder="Quick search..." autoComplete="off" onChange={event => handleSearch(event)} />
         </div>
 
         <ul className="mt-12 lg:mt-8 z-60">

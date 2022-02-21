@@ -78,13 +78,13 @@ export default function ExampleDetail() {
           </div>
           {/* <Notification id={record && record.related} /> */}
           <div className="flex justify-end mt-20">
-          <button className="text-white" onClick={() => setOpen(true)}>
-            Report a problem
-          </button>
+            <button className="text-white" onClick={() => setOpen(true)}>
+              Report a problem
+            </button>
           </div>
         </div>
-       
-       {record && <ModalForm open={open} setOpen={setOpen} />} 
+
+        {record && <ModalForm open={open} setOpen={setOpen} />}
 
         <Links />
       </div>

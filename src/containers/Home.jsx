@@ -21,8 +21,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="mb-32 relative transition-colors duration-500 dark:bg-purples bg-gradient-radial from-greens-100 to-greens-50 dark:from-purples-red dark:to-purples h-screen pt-20">
-      <div className="relative pt-6 pb-16 sm:pb-24 my-20">
+    <div className="relative transition-colors duration-500 dark:bg-purples bg-gradient-radial from-greens-100 to-greens-50 dark:from-purples-red dark:to-purples pt-20">
+      <div className="relative pt-6 pb-16 ">
         <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
           <div className="text-center ">
             <h1 className="text-4xl tracking-tight font-extrabold text-darkGreen dark:text-white sm:text-5xl md:text-6xl">
@@ -49,7 +49,7 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto text-center mt-52">
+        <div className="max-w-7xl mx-auto text-center mt-72">
           <div className="mb-16">
             <h1 className="text-4xl tracking-tight font-bold text-darkGreen">Deepen your NEAR knowledge</h1>
             <p className="mb-3 max-w-md mx-auto text-base text-gray-900 dark:text-white sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">Explore and get fluent in NEAR's Ecosystem</p>

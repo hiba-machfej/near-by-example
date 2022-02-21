@@ -32,7 +32,6 @@ const Navbar = () => {
                   <p className="font-extrabold text-xl">
                     NEAR by <span className="text-green">Example</span> <span className="text-sm font-light">(Beta)</span>
                   </p>
-              
                 </NavLink>
                 <div className="-mr-2 flex items-center md:hidden">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white hover:bg-green focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
