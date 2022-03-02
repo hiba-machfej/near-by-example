@@ -35,11 +35,11 @@ export default function Home() {
                   AssemblyScript
                 </Link>
               </div>
-              {/* <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 w-1/2">
+              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 w-1/2">
                 <Link to="/example-list/rust" className="w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-gray-900  bg-green hover:bg-darkGreen md:py-4 md:text-lg md:px-10" type="button">
                   Rust
                 </Link>
-              </div> */}
+              </div>
             </div>
           </div>
         </main>
